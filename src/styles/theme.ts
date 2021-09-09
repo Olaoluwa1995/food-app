@@ -2,10 +2,7 @@ import { extendTheme } from "@chakra-ui/react";
 import { Styles } from "@chakra-ui/theme-tools";
 
 export const COLORS = {
-  PRIMARY_COLOR: "#FF86B0",
-  DEEP_BLUE: "#212353",
-  WHITE: "#ffffff",
-  GREY_COLOR: "#808080",
+  PRIMARY_COLOR: "#FF24B0",
   BACKGROUND_COLOR: "#f4f4f4",
 };
 

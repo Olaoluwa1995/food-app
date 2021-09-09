@@ -12,6 +12,7 @@ import {
   FlexboxProps,
   HStack,
   Icon,
+  Image,
   List,
   ListIcon,
   ListItem,
@@ -24,6 +25,7 @@ import { COLORS } from "../../styles/theme";
 import NavLinkItem, {
   NavLinkItemProps,
 } from "../nav-link/header-links.component";
+import LogoImage from "../../assets/images/logo.png";
 
 export type MenuItemProps = {
   icon?: any;
@@ -48,17 +50,15 @@ const Header: React.FC<HeaderProps> = () => {
         as="header"
         position="fixed"
         width="100%"
-        bgColor={COLORS.WHITE}
+        bgColor="white"
       >
         <Flex
           flexDir="row"
           width="100%"
-          ml={{ base: "2%", sm: "5%" }}
-          mr={{ base: "2%", sm: "5%" }}
-          mt="1rem"
-          mb="0.5rem"
+          my="1rem"
           align="center"
-          justify="center"
+          px={{ base: "5%", sm: "0" }}
+          justify={{ base: "space-between", sm: "center" }}
         >
           <Box display={{ base: "flex", sm: "none" }}>
             <HamburgerIcon as="button" w={8} h={8} onClick={onOpen} />
@@ -77,13 +77,13 @@ const Header: React.FC<HeaderProps> = () => {
                     }}
                   />
                   <DrawerBody px="0" pt="3rem">
-                    {/* <Image
+                    <Image
                       src={LogoImage}
                       alt="logo"
                       w="4rem"
                       mb="1rem"
                       ml="2rem"
-                    /> */}
+                    />
                     <List>
                       <Divider my="0.5rem" />
                       {headerLinksData.map((headerLink: any) => {
@@ -99,7 +99,7 @@ const Header: React.FC<HeaderProps> = () => {
                             <NavLinkItem
                               fontSize="0.8rem"
                               textTransform="uppercase"
-                              color={COLORS.GREY_COLOR}
+                              color="grey"
                               aria-label={headerLink.title}
                               onClick={onClose}
                               url={headerLink.url}
@@ -117,21 +117,22 @@ const Header: React.FC<HeaderProps> = () => {
             </Drawer>
           </Box>
           <NavLinkItem
-            w={{ base: "3rem", md: "4rem" }}
+            ml="10%"
+            w={{ base: "2rem", md: "3rem" }}
             aria-label="homepage"
             url="/"
           >
-            {/* <Image
+            <Image
               src={LogoImage}
               alt="logo"
-              w={{ base: "3rem", md: "4rem" }}
-            /> */}
+              w={{ base: "2rem", md: "3rem" }}
+            />
           </NavLinkItem>
           <Flex
             as="nav"
             display={{ base: "none", sm: "flex" }}
             direction="row"
-            pl={{ base: "none", sm: "1rem", md: "none" }}
+            mx="auto"
             align="center"
           >
             {headerLinksData.map((headerLink: any) => {

@@ -17,7 +17,7 @@ export const headerLinksData: LinkProps[] = [
   {
     key: 2,
     title: "Sign Up",
-    url: "/signup",
+    url: "/sign-up",
     as: FaUserPlus,
   },
 ];

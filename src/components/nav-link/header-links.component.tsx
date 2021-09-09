@@ -1,6 +1,6 @@
 import { Box, BoxProps, LinkBoxProps } from "@chakra-ui/react";
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { COLORS } from "../../styles/theme";
 
 export interface NavLinkItemProps {
